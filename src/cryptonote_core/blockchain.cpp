@@ -91,7 +91,7 @@ static const struct {
   { 1, 1, 0, config::GENESIS_TIMESTAMP },
 
   // version 2
-  { 2, 28657, 0, 1524109300 },
+  { 2, 28684, 0, 1524114182 },
   
   
 };
