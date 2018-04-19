@@ -1,0 +1,17 @@
+[Unit]
+Description=NXBoost Full Node
+After=network.target
+
+[Service]
+User=intense
+Group=intense
+WorkingDirectory=~
+
+Type=forking
+PIDFile=/var/run/nxboostd.pid
+
+ExecStart=/usr/bin/nxboostd --config-file /etc/nxboostd.conf \
+    --detach --pidfile /var/run/nxboostd.pid
+
+[Install]
+WantedBy=multi-user.target
