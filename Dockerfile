@@ -32,7 +32,7 @@ VOLUME /root/.NXBoost
 
 # Generate your wallet via accessing the container and run:
 # cd /wallet
-# intense-wallet-cli
+# nxboost-wallet-cli
 VOLUME /wallet
 
 ENV LOG_LEVEL 0

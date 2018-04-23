@@ -91,11 +91,11 @@ static const struct {
   { 1, 1, 0, 1517301393 },
 
   // version 2
-  { 2, 28684, 0, 1524114182 },
+  { 4, 28684, 0, 1524114182 },
   
   
 };
-static const uint64_t mainnet_hard_fork_version_1_till = 50000;
+static const uint64_t mainnet_hard_fork_version_1_till = 28683;
 
 static const struct {
   uint8_t version;
@@ -1014,7 +1014,7 @@ bool Blockchain::validate_miner_transaction(const block& b, size_t cumulative_bl
     return false;
   }
   // From hard fork 2, we allow a miner to claim less block reward than is allowed, in case a miner wants less dust
-  // -- Reward penalties were in place from block 0 on Intense Coin -> miners may not use full block reward amount.
+  // -- Reward penalties were in place from block 0 on nxbost Coin -> miners may not use full block reward amount.
   /*if (m_hardfork->get_current_version() < 2)
   {
     if(base_reward + fee != money_in_use)
