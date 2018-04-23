@@ -1014,7 +1014,7 @@ bool Blockchain::validate_miner_transaction(const block& b, size_t cumulative_bl
     return false;
   }
   // From hard fork 2, we allow a miner to claim less block reward than is allowed, in case a miner wants less dust
-  // -- Reward penalties were in place from block 0 on Intense Coin -> miners may not use full block reward amount.
+  // -- Reward penalties were in place from block 0 on nxbost Coin -> miners may not use full block reward amount.
   /*if (m_hardfork->get_current_version() < 2)
   {
     if(base_reward + fee != money_in_use)

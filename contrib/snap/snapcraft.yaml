@@ -15,16 +15,16 @@ apps:
         plugs:
             - network
             - network-bind
-    intense-wallet-rpc:
+    nxboost-wallet-rpc:
         command: |
-          intense-wallet-rpc --log-file ${SNAP_USER_DATA}
+          nxboost-wallet-rpc --log-file ${SNAP_USER_DATA}
         plugs:
             - home
             - network
             - network-bind
-    intense-wallet-cli:
+    nxboost-wallet-cli:
         command: |
-          intense-wallet-cli --log-file ${SNAP_USER_DATA}
+          nxboost-wallet-cli --log-file ${SNAP_USER_DATA}
         plugs:
             - home
             - network

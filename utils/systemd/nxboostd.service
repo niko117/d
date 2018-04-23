@@ -3,8 +3,8 @@ Description=NXBoost Full Node
 After=network.target
 
 [Service]
-User=intense
-Group=intense
+User=nxboost
+Group=nxboost
 WorkingDirectory=~
 
 Type=forking
