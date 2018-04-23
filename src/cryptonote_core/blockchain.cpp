@@ -95,7 +95,7 @@ static const struct {
   
   
 };
-static const uint64_t mainnet_hard_fork_version_1_till = 50000;
+static const uint64_t mainnet_hard_fork_version_1_till = 28683;
 
 static const struct {
   uint8_t version;
