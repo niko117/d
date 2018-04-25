@@ -33,9 +33,12 @@
 #include <boost/format.hpp>
 #include <boost/optional/optional.hpp>
 #include <boost/utility/value_init.hpp>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/trim.hpp>
+#include <boost/algorithm/string/split.hpp>
 #include "include_base_utils.h"
 using namespace epee;
-
+#include <boost/algorithm/string/join.hpp>
 #include "cryptonote_config.h"
 #include "wallet2.h"
 #include "wallet2_api.h"
@@ -426,6 +429,19 @@ static void throw_on_rpc_response_error(const boost::optional<std::string> &stat
   THROW_WALLET_EXCEPTION_IF(*status != CORE_RPC_STATUS_OK, tools::error::wallet_generic_rpc_error, method, *status);
 }
 
+std::string strjoin(const std::vector<size_t> &V, const char *sep)
+{
+  std::stringstream ss;
+  bool first = true;
+  for (const auto &v: V)
+  {
+    if (!first)
+      ss << sep;
+    ss << std::to_string(v);
+    first = false;
+  }
+  return ss.str();
+}
 } //namespace
 
 namespace tools
