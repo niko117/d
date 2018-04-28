@@ -293,7 +293,7 @@ namespace cryptonote
       }
       else
       {
-		  MWARNING("Processing RCT tx ..");
+		  
         ar.tag("rct_signatures");
         if (!vin.empty())
         {
